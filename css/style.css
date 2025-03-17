@@ -211,6 +211,7 @@ main {
   -moz-column-gap: 0;
        column-gap: 0;
   row-gap: 0;
+  margin-bottom: 70px;
 }
 .hero__left {
   width: 531px;
@@ -256,4 +257,27 @@ main {
   height: 100%;
   -o-object-fit: cover;
      object-fit: cover;
+}
+
+.partners {
+  margin-bottom: 140px;
+}
+.partners__list {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  -moz-column-gap: clamp(20px, 9vw, 95px);
+       column-gap: clamp(20px, 9vw, 95px);
+  row-gap: 0;
+}
+.partners__item {
+  height: 48px;
+}
+.partners__logo {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  filter: grayscale(100%);
 }/*# sourceMappingURL=style.css.map */
