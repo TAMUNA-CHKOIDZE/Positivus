@@ -1,3 +1,4 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Space+Grotesk:wght@300..700&display=swap");
 html,
 body,
 div,
@@ -136,4 +137,62 @@ a {
 
 * {
   box-sizing: border-box;
+}
+
+body {
+  font-family: "Inter", sans-serif;
+}
+
+.header {
+  width: min(100%, 1440px);
+  margin: auto;
+  padding: 60px 100px 0 100px;
+  border: 2px solid red;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: row;
+  -moz-column-gap: 0;
+       column-gap: 0;
+  row-gap: 0;
+}
+.header__nav-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  -moz-column-gap: 40px;
+       column-gap: 40px;
+  row-gap: 0;
+}
+.header__nav-list {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  -moz-column-gap: 40px;
+       column-gap: 40px;
+  row-gap: 0;
+}
+.header__nav-link {
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 28px;
+  letter-spacing: 0%;
+  color: #000000;
+}
+.header__quote-button {
+  border-width: 1px;
+  border-style: solid;
+  border-color: #191a23;
+  padding: 20px 35px;
+  border-radius: 14px;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 28px;
+  letter-spacing: 0%;
+  color: #000000;
+}
+.header__burger {
+  display: none;
 }/*# sourceMappingURL=style.css.map */
