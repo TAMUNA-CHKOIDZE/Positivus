@@ -5,15 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://kit.fontawesome.com/085bce8105.js" crossorigin="anonymous"></script>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
     <link rel="stylesheet" href="./css/style.css">
-    <style>
-        .accordion-button::after {
-            content: none;
-            /* This removes the default Bootstrap arrow icon */
-        }
-    </style>
     <title>Positivus</title>
     <link rel="icon" type="image/x-icon" href="./images/logo.svg">
 </head>
@@ -346,20 +338,338 @@
                 </div>
             </div>
         </section>
+        <!-- This is the team section -->
+        <section class="team">
+            <div class="team__header">
+                <h2 class="team__title">Team</h2>
+                <p class="team__description">
+                    Meet the skilled and experienced team behind our successful digital marketing strategies
+                </p>
+            </div>
+            <!-- team__cards group  -->
+            <div class="team__cards">
+                <!-- team__card 1 -->
+                <div class="team__card">
+                    <div class="team__card-top">
+                        <div class="team__card-photo">
+                            <img src="./images/team1.svg" alt="John Smith" class="team__card-img" />
+                        </div>
+                        <div class="team__card-info">
+                            <h3 class="team__card-name">John Smith</h3>
+                            <p class="team__card-position">CEO and Founder</p>
+                        </div>
+                        <div class="team__card-icon">
+                            <img src="./images/linkedin-green.svg" alt="linkedin's icon" class="team__card-icon-img" />
+                        </div>
+                    </div>
+                    <div class="team__card-bottom">
+                        <p class="team__card-experience">
+                            10+ years of experience in digital marketing. Expertise in SEO, PPC, and content strategy.
+                        </p>
+                    </div>
+                </div>
+                <!-- team__card 2 -->
+                <div class="team__card">
+                    <div class="team__card-top">
+                        <div class="team__card-photo">
+                            <img src="./images/team2.svg" alt="Jane Doe" class="team__card-img" />
+                        </div>
+                        <div class="team__card-info">
+                            <h3 class="team__card-name">Jane Doe</h3>
+                            <p class="team__card-position">Director of Operations</p>
+                        </div>
+                        <div class="team__card-icon">
+                            <img src="./images/linkedin-green.svg" alt="linkedin's icon" class="team__card-icon-img" />
+                        </div>
+                    </div>
+                    <div class="team__card-bottom">
+                        <p class="team__card-experience">
+                            7+ years of experience in project management and team leadership. Strong organizational and
+                            communication skills
+                        </p>
+                    </div>
+                </div>
+                <!-- team__card 3 -->
+                <div class="team__card">
+                    <div class="team__card-top">
+                        <div class="team__card-photo">
+                            <img src="./images/team3.svg" alt="Michael Brown" class="team__card-img" />
+                        </div>
+                        <div class="team__card-info">
+                            <h3 class="team__card-name">Michael Brown</h3>
+                            <p class="team__card-position">Senior SEO Specialist</p>
+                        </div>
+                        <div class="team__card-icon">
+                            <img src="./images/linkedin-green.svg" alt="linkedin's icon" class="team__card-icon-img" />
+                        </div>
+                    </div>
+                    <div class="team__card-bottom">
+                        <p class="team__card-experience">
+                            5+ years of experience in SEO and content creation. Proficient in keyword research and
+                            on-page optimization
+                        </p>
+                    </div>
+                </div>
+                <!-- team__card 4 -->
+                <div class="team__card">
+                    <div class="team__card-top">
+                        <div class="team__card-photo">
+                            <img src="./images/team4.svg" alt="Michael Brown" class="team__card-img" />
+                        </div>
+                        <div class="team__card-info">
+                            <h3 class="team__card-name">Emily Johnson</h3>
+                            <p class="team__card-position">PPC Manager</p>
+                        </div>
+                        <div class="team__card-icon">
+                            <img src="./images/linkedin-green.svg" alt="linkedin's icon" class="team__card-icon-img" />
+                        </div>
+                    </div>
+                    <div class="team__card-bottom">
+                        <p class="team__card-experience">
+                            3+ years of experience in paid search advertising. Skilled in campaign management and
+                            performance analysis
+                        </p>
+                    </div>
+                </div>
+                <!-- team__card 5 -->
+                <div class="team__card">
+                    <div class="team__card-top">
+                        <div class="team__card-photo">
+                            <img src="./images/team5.svg" alt="Brian Williams" class="team__card-img" />
+                        </div>
+                        <div class="team__card-info">
+                            <h3 class="team__card-name">Brian Williams</h3>
+                            <p class="team__card-position">Social Media Specialist</p>
+                        </div>
+                        <div class="team__card-icon">
+                            <img src="./images/linkedin-green.svg" alt="linkedin's icon" class="team__card-icon-img" />
+                        </div>
+                    </div>
+                    <div class="team__card-bottom">
+                        <p class="team__card-experience">
+                            4+ years of experience in social media marketing. Proficient in creating and scheduling
+                            content, analyzing metrics, and building engagement
+                        </p>
+                    </div>
+                </div>
+                <!-- team__card 6 -->
+                <div class="team__card">
+                    <div class="team__card-top">
+                        <div class="team__card-photo">
+                            <img src="./images/team6.svg" alt="Sarah Kim" class="team__card-img" />
+                        </div>
+                        <div class="team__card-info">
+                            <h3 class="team__card-name">Sarah Kim</h3>
+                            <p class="team__card-position">Content Creator</p>
+                        </div>
+                        <div class="team__card-icon">
+                            <img src="./images/linkedin-green.svg" alt="linkedin's icon" class="team__card-icon-img" />
+                        </div>
+                    </div>
+                    <div class="team__card-bottom">
+                        <p class="team__card-experience">
+                            2+ years of experience in writing and editing
+                            Skilled in creating compelling, SEO-optimized content for various industries
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- This is the testimonials section -->
+        <section class="testimonials">
+            <div class="testimonials__header">
+                <h2 class="testimonials__title">Testimonials</h2>
+                <p class="testimonials__description">
+                    Hear from Our Satisfied Clients: Read Our Testimonials to Learn More about Our Digital Marketing
+                    Services
+                </p>
+            </div>
+            <!-- testimonials__block -->
+            <div class="testimonials__block">
+                <!-- Testimonials Cards -->
+                <div class="testimonials__cards">
+                    <!-- Card 1 -->
+                    <div class="testimonials__card">
+                        <div class="testimonials__bubble-container">
+                            <img src="./images/Bubble.svg" alt="bubble" class="testimonials__bubble-image">
+                            <p class="testimonials__card-text">
+                                "We have been working with Positivus for the past year and have seen a significant
+                                increase
+                                in website traffic and leads as a result of their efforts. The team is professional,
+                                responsive, and truly cares about the success of our business. We highly recommend
+                                Positivus
+                                to any company looking to grow their online presence."
+                            </p>
+                        </div>
+                        <div class="testimonials__card-footer">
+                            <p class="testimonials__card-name">John Smith</p>
+                            <p class="testimonials__card-position">Marketing Director at XYZ Corp</p>
+                        </div>
+                    </div>
+                    <!-- Card 2 -->
+                    <div class="testimonials__card">
+                        <div class="testimonials__bubble-container">
+                            <img src="./images/Bubble.svg" alt="bubble" class="testimonials__bubble-image">
+                            <p class="testimonials__card-text">
+                                "We have been working with Positivus for the past year and have seen a significant
+                                increase
+                                in website traffic and leads as a result of their efforts. The team is professional,
+                                responsive, and truly cares about the success of our business. We highly recommend
+                                Positivus
+                                to any company looking to grow their online presence."
+                            </p>
+                        </div>
+                        <div class="testimonials__card-footer">
+                            <p class="testimonials__card-name">John Smith</p>
+                            <p class="testimonials__card-position">Marketing Director at XYZ Corp</p>
+                        </div>
+                    </div>
+                    <!-- Card 3 -->
+                    <div class="testimonials__card">
+                        <div class="testimonials__bubble-container">
+                            <img src="./images/Bubble.svg" alt="bubble" class="testimonials__bubble-image">
+                            <p class="testimonials__card-text">
+                                "We have been working with Positivus for the past year and have seen a significant
+                                increase
+                                in website traffic and leads as a result of their efforts. The team is professional,
+                                responsive, and truly cares about the success of our business. We highly recommend
+                                Positivus
+                                to any company looking to grow their online presence."
+                            </p>
+                        </div>
+                        <div class="testimonials__card-footer">
+                            <p class="testimonials__card-name">John Smith</p>
+                            <p class="testimonials__card-position">Marketing Director at XYZ Corp</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- Carousel Controls and Stars -->
+                <div class="testimonials__controls">
+                    <button class="testimonials__control-prev" type="button">
+                        <img src="./images/arrow-left.svg" alt="arrow-left" class="testimonials__control-icon">
+                    </button>
+                    <div class="testimonials__stars">
+                        <img src="./images/star-green.svg" alt="star-icon" class="testimonials__star"></img>
+                        <img src="./images/star-white.svg" alt="star-icon" class="testimonials__star"></img>
+                        <img src="./images/star-white.svg" alt="star-icon" class="testimonials__star"></img>
+                        <img src="./images/star-white.svg" alt="star-icon" class="testimonials__star"></img>
+                        <img src="./images/star-white.svg" alt="star-icon" class="testimonials__star"></img>
+                    </div>
+                    <button class="testimonials__control-next" type="button">
+                        <img src="./images/arrow-right.svg" alt="arrow-right" class="testimonials__control-icon">
+                    </button>
+                </div>
+            </div>
+        </section>
+        <!-- This is the Contact Us section -->
+        <section class="contact-us">
+            <!-- Contact Us Title and Description -->
+            <div class="contact-us__header">
+                <h2 class="contact-us__title">Contact Us</h2>
+                <p class="contact-us__description">Connect with Us: Let's Discuss Your Digital Marketing Needs</p>
+            </div>
 
+            <!-- Contact Us Form and Illustration Block -->
+            <div class="contact-us__body">
+                <!-- Contact Form -->
+                <div class="contact-us__form">
+                    <form name="contact-us" class="contact-us__form-content">
+                        <fieldset class="contact-us__form-options">
+                            <label class="contact-us__form-option">
+                                <input type="radio" name="contact-type" value="say-hi" class="contact-us__form-radio">
+                                Say Hi
+                            </label>
+                            <label class="contact-us__form-option">
+                                <input type="radio" name="contact-type" value="get-a-quote"
+                                    class="contact-us__form-radio">
+                                Get a Quote
+                            </label>
+                        </fieldset>
 
+                        <div class="contact-us__form-groups">
+                            <div class="contact-us__form-group">
+                                <label for="name" class="contact-us__form-label">Name</label>
+                                <input type="text" id="name" class="contact-us__form-input" required placeholder="Name">
+                            </div>
 
+                            <div class="contact-us__form-group">
+                                <label for="email" class="contact-us__form-label">Email*</label>
+                                <input type="email" id="email" class="contact-us__form-input" required
+                                    placeholder="Email">
+                            </div>
+
+                            <div class="contact-us__form-group">
+                                <label for="message" class="contact-us__form-label">Message*</label>
+                                <textarea id="message" class="contact-us__form-textarea" required
+                                    placeholder="Message"></textarea>
+                            </div>
+                        </div>
+
+                        <button type="submit" class="contact-us__form-button">Send Message</button>
+                    </form>
+                </div>
+
+                <!-- Illustration -->
+                <div class="contact-us__illustration">
+                    <img src="./images/contact.svg" alt="Contact Us Illustration" class="contact-us__illustration-img">
+                </div>
+            </div>
+        </section>
     </main>
-
-
-
-
-
-
-
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
-        crossorigin="anonymous"></script>
+    <!-- This is the footer -->
+    <footer class="footer">
+        <!-- top  -->
+        <div class="footer__header">
+            <a href="index.html" class="footer__logo">
+                <img src="./images/logo.svg" alt="Positivus logo">
+                <span>Positivus</span>
+            </a>
+            <nav class="footer__nav">
+                <ul class="footer__nav-list">
+                    <li class="footer__nav-item"><a href="#" class="footer__nav-link">About us</a></li>
+                    <li class="footer__nav-item"><a href="#" class="footer__nav-link">Services</a></li>
+                    <li class="footer__nav-item"><a href="#" class="footer__nav-link">Use Cases</a></li>
+                    <li class="footer__nav-item"><a href="#" class="footer__nav-link">Pricing</a></li>
+                    <li class="footer__nav-item"><a href="#" class="footer__nav-link">Blog</a></li>
+                </ul>
+            </nav>
+            <ul class="footer__socials">
+                <li><a href="#"><img src="./images/social-icon1.svg" alt="linkedin"></a></li>
+                <li><a href="#"><img src="./images/social-icon2.svg" alt="facebook"></a></li>
+                <li><a href="#"><img src="./images/social-icon3.svg" alt="twiter"></a></li>
+            </ul>
+        </div>
+        <!-- middle -->
+        <div class="footer__container">
+            <div class="footer__contact-us">
+                <h3 class="footer__title">Contact us:</h3>
+                <ul class="footer__contact-us-list">
+                    <li>
+                        <a href="mailto:info@positivus.com" class="footer__contact-us-link">Email:
+                            info@positivus.com</a>
+                    </li>
+                    <li>
+                        <a href="tel:555-567-8901" class="footer__contact-us-link">Phone: 555-567-8901</a>
+                    </li>
+                    <li>
+                        <a href="https://maps.app.goo.gl/WQYjMkHgSr8YivZd6" target="_blank"
+                            class="footer__contact-us-link">Address: 1234 Main St
+                            Moonstone City, Stardust State 12345</a>
+                    </li>
+                </ul>
+            </div>
+            <form name="subscribe" class="footer__form">
+                <input type="text" name="Email" id="email" placeholder="Email" class="footer__email-input">
+                <button type="submit" class="footer_subscribe_btn">Subscribe to news</button>
+            </form>
+        </div>
+        <div class="footer__dividing_line"></div>
+        <!-- bottom  -->
+        <p class="footer__copyright">
+            &copy; 2023 Positivus. All Rights Reserved.
+            <a href="#" class="footer__privacy">Privacy Policy</a>
+        </p>
+    </footer>
 </body>
 
 </html>
