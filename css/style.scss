@@ -94,3 +94,95 @@ main {
     filter: grayscale(100%);
   }
 }
+
+// ----- This is the services section -----
+.services {
+  margin-bottom: 100px;
+  &__header {
+    @include flex(flex-start, center, row, 40px, 0);
+    margin-bottom: 80px;
+  }
+  &__title {
+    background: $primary-color;
+    @include font-style(500, 40px, 100%, 0%);
+    color: $black;
+    border-radius: $border-radius14;
+    padding-inline: 7px;
+  }
+  &__description {
+    width: 580px;
+    @include font-style(400, 18px, 100%, 0%);
+    color: $black;
+  }
+  // Cards Section
+  &__cards {
+    @include flex(center, center, row, 40px, 40px);
+    flex-wrap: wrap;
+  }
+  &__card {
+    flex: 1 1 40%;
+    border-radius: $border-radius45;
+    padding: 50px;
+    min-height: 310px;
+    @include flex(center, center, row, 93px, 0);
+  }
+  &__card:nth-child(1) {
+    background: $light-color;
+  }
+  &__card:nth-child(2) {
+    background: $primary-color;
+  }
+  &__card:nth-child(3) {
+    background: $dark-color;
+  }
+  &__card:nth-child(4) {
+    background: $light-color;
+  }
+  &__card:nth-child(5) {
+    background: $primary-color;
+  }
+  &__card:nth-child(6) {
+    background: $dark-color;
+  }
+  &__card-left {
+    @include flex(center, flex-start, column, 0, 93px);
+  }
+  &__card-title {
+    @include font-style(500, 30px, 100%, 0%);
+    color: $black;
+  }
+  &__span1 {
+    border-radius: 7px;
+    &.green {
+      background: $primary-color;
+    }
+    &.white {
+      background-color: $white;
+    }
+  }
+  &__span2 {
+    border-radius: 7px;
+    &.green {
+      background: $primary-color;
+    }
+    &.white {
+      background-color: $white;
+    }
+  }
+  &__card-link-group {
+    @include flex(flex-start, center, row, 15px, 0);
+  }
+  &__card-learn-more {
+    @include font-style(400, 20px, 28px, 0%);
+    color: $black;
+    &.color-white {
+      color: $white;
+    }
+  }
+  &__card-right {
+    width: 210px;
+  }
+  &__card-image {
+    width: 100%;
+  }
+}
