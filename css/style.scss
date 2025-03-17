@@ -1,5 +1,5 @@
 // font
-@import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Space+Grotesk:wght@300..700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300..700&display=swap");
 
 // Partial Files
 @import "./mixin";
@@ -15,7 +15,6 @@ body {
 .header {
   @include container(1440px);
   padding: 60px 100px 0 100px;
-  border: 2px solid red;
   @include flex(space-between, center, row, 0, 0);
   &__nav-wrapper {
     @include flex(center, center, row, 40px, 0);
@@ -36,5 +35,44 @@ body {
   }
   &__burger {
     display: none;
+  }
+}
+
+// ----- This is the main content section of the website -----
+main {
+  @include container(1440px);
+  padding-inline: 100px;
+  margin-block: 70px 140px;
+}
+
+// ----- This is the hero section -----
+.hero {
+  @include flex(space-between, flex-start, row, 0, 0);
+  &__left {
+    width: 531px;
+    @include flex(center, flex-start, column, 0, 35px);
+  }
+  &__title {
+    @include font-style(500, 60px, 100%, 0%);
+    color: $black;
+  }
+  &__text {
+    @include font-style(400, 20px, 28px, 0%);
+    color: $black;
+  }
+  &__button {
+    @include font-style(400, 20px, 28px, 0%);
+    color: $white;
+    border: none;
+    border-radius: $border-radius14;
+    padding: $button-padding;
+    background: $dark-color;
+  }
+  &__right {
+    width: 600px;
+    min-height: 515px;
+  }
+  &__image {
+    @include image-style(100%, 100%, cover);
   }
 }
