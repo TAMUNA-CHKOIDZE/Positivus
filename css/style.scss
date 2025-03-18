@@ -303,6 +303,7 @@ main {
     background: $light-color;
     transition: background-color 0.3s;
     cursor: pointer;
+    box-shadow: $box-shadow;
   }
 
   &__content {
@@ -333,8 +334,9 @@ main {
     overflow: hidden;
     padding-top: 0;
     margin-top: 0;
-    border-top: 1px solid $black; 
-    transition: max-height .6s ease, opacity .6s ease, padding-top .6s ease, margin-top .6s ease;
+    border-top: 1px solid $black;
+    transition: max-height 0.6s ease, opacity 0.6s ease, padding-top 0.6s ease,
+      margin-top 0.6s ease;
   }
 
   &__step-description {
@@ -362,3 +364,73 @@ main {
   }
 }
 
+// ----- This is the team section -----
+.team {
+  margin-bottom: 140px;
+
+  &__header {
+    margin-bottom: 80px;
+    @include flex(flex-start, center, row, 40px, 0);
+  }
+
+  &__title {
+    @include font-style(500, 40px, 100%, 0%);
+    color: $black;
+    padding-inline: 7px;
+    background: $primary-color;
+    border-radius: 7px;
+  }
+
+  &__description {
+    width: 473px;
+    font-family: Space Grotesk;
+    @include font-style(400, 18px, 100%, 0%);
+    color: $black;
+  }
+  &__cards {
+    @include flex(center, center, row, 40px, 40px);
+    flex-wrap: wrap;
+  }
+  &__card {
+    flex: 1 1 30%;
+    height: 354px;
+    @include border(1px, solid, $dark-color);
+    border-radius: $border-radius45;
+    padding: 40px 35px 60px;
+    box-shadow: $box-shadow;
+  }
+  &__card-top {
+    @include flex(flex-start, flex-end, row, 20px, 0);
+    position: relative;
+    padding-bottom: 28px;
+    margin-bottom: 28px;
+    border-bottom: 1px solid $black;
+  }
+  &__card-name {
+    @include font-style(500, 20px, 100%, 0%);
+    color: $black;
+  }
+  &__card-position {
+    @include font-style(400, 18px, 100%, 0%);
+    color: $black;
+  }
+  &__card-icon {
+    position: absolute;
+    top: 0;
+    right: 0;
+  }
+  &__card-experience {
+    @include font-style(400, 18px, 100%, 0%);
+    color: $black;
+  }
+  &__button {
+    margin-top: 40px;
+    padding: 20px 76px;
+    border-radius: $border-radius14;
+    background: $dark-color;
+    color: $white;
+    @include font-style(400, 20px, 28px, 0%);
+    display: flex;
+    margin-left: auto;
+  }
+}
