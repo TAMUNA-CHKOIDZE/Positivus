@@ -123,6 +123,7 @@ main {
   margin-bottom: 140px;
   &__list {
     @include flex(center, center, row, clamp(20px, 9vw, 95px), 0);
+    flex-wrap: wrap;
   }
   &__item {
     height: 48px;

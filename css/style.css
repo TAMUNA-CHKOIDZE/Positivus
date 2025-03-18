@@ -310,6 +310,7 @@ main {
   -moz-column-gap: clamp(20px, 9vw, 95px);
        column-gap: clamp(20px, 9vw, 95px);
   row-gap: 0;
+  flex-wrap: wrap;
 }
 .partners__item {
   height: 48px;
