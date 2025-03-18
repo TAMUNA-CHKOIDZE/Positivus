@@ -186,3 +186,35 @@ main {
     width: 100%;
   }
 }
+// ----- This is the proposal section -----
+.proposal {
+  margin-bottom: 140px;
+  padding: 60px;
+  background: $light-color;
+  border-radius: $border-radius45;
+  @include flex(space-between, center, row, 0, 0);
+  position: relative;
+  &__content {
+    width: 500px;
+    @include flex(center, flex-start, column, 0, 26px);
+  }
+  &__title {
+    @include font-style(500, 30px, 100%, 0%);
+    color: $black;
+  }
+  &__text {
+    @include font-style(400, 18px, 100%, 0%);
+    color: $black;
+  }
+  &__button {
+    padding: $button-padding;
+    background: $dark-color;
+    border-radius: $border-radius14;
+    color: $white;
+    font-style: (400, 20px, 28px, 0%);
+  }
+  &__image {
+    position: absolute;
+    right: 135px;
+  }
+}
