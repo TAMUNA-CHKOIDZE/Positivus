@@ -443,7 +443,6 @@ main {
     margin-bottom: 80px;
     @include flex(flex-start, center, row, 40px, 0);
   }
-
   &__title {
     @include font-style(500, 40px, 100%, 0%);
     color: $black;
@@ -503,5 +502,104 @@ main {
   }
   &__stars {
     @include flex(center, center, row, 19px, 0);
+  }
+}
+
+// ----- This is the Contact Us section -----
+.contact-us {
+  margin-bottom: 140px;
+
+  &__header {
+    margin-bottom: 80px;
+    @include flex(flex-start, center, row, 40px, 0);
+  }
+  &__title {
+    @include font-style(500, 40px, 100%, 0%);
+    color: $black;
+    padding-inline: 7px;
+    background: $primary-color;
+    border-radius: 7px;
+  }
+
+  &__description {
+    width: 323px;
+    font-family: Space Grotesk;
+    @include font-style(400, 18px, 100%, 0%);
+    color: $black;
+  }
+  &__body {
+    background: $light-color;
+    border-radius: $border-radius45;
+    position: relative;
+    overflow: hidden;
+    height: 773px;
+    padding: 60px 0 80px 100px;
+    @include flex(space-between, flex-start, row, 0, 0);
+  }
+  &__form {
+    width: 556px;
+  }
+  &__form-content {
+    display: flex;
+    flex-direction: column;
+    row-gap: 40px;
+  }
+  &__illustration {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    left: 70%;
+  }
+  &__form-options {
+    display: flex;
+    column-gap: 35px;
+    align-items: center;
+  }
+  &__form-option {
+    display: flex;
+    align-items: center;
+    column-gap: 14px;
+    @include font-style(400, 18px, 100%, 0%);
+    color: $black;
+  }
+  &__form-radio {
+    width: 28px;
+    height: 28px;
+    accent-color: $primary-color;
+  }
+  &__form-groups {
+    display: flex;
+    flex-direction: column;
+    row-gap: 25px;
+  }
+  &__form-group {
+    display: flex;
+    flex-direction: column;
+    row-gap: 5px;
+  }
+  &__form-input {
+    width: 100%;
+    height: 59px;
+    border-radius: $border-radius14;
+    padding: 18px 30px;
+  }
+  &__form-textarea {
+    width: 100%;
+    height: 190px;
+    resize: none;
+    border-radius: $border-radius14;
+    padding: 18px 30px;
+  }
+  &__form-label {
+    @include font-style(400, 16px, 28px, 0%);
+    color: $black;
+  }
+  &__form-button {
+    width: 100%;
+    height: 68px;
+    background: $dark-color;
+    border-radius: $border-radius14;
+    @include font-style(400, 20px, 28px, 0%);
+    color: $white;
   }
 }

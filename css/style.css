@@ -868,4 +868,129 @@ main {
   -moz-column-gap: 19px;
        column-gap: 19px;
   row-gap: 0;
+}
+
+.contact-us {
+  margin-bottom: 140px;
+}
+.contact-us__header {
+  margin-bottom: 80px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-direction: row;
+  -moz-column-gap: 40px;
+       column-gap: 40px;
+  row-gap: 0;
+}
+.contact-us__title {
+  font-weight: 500;
+  font-size: 40px;
+  line-height: 100%;
+  letter-spacing: 0%;
+  color: #000000;
+  padding-inline: 7px;
+  background: #b9ff66;
+  border-radius: 7px;
+}
+.contact-us__description {
+  width: 323px;
+  font-family: Space Grotesk;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 100%;
+  letter-spacing: 0%;
+  color: #000000;
+}
+.contact-us__body {
+  background: #f3f3f3;
+  border-radius: 45px;
+  position: relative;
+  overflow: hidden;
+  height: 773px;
+  padding: 60px 0 80px 100px;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-direction: row;
+  -moz-column-gap: 0;
+       column-gap: 0;
+  row-gap: 0;
+}
+.contact-us__form {
+  width: 556px;
+}
+.contact-us__form-content {
+  display: flex;
+  flex-direction: column;
+  row-gap: 40px;
+}
+.contact-us__illustration {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  left: 70%;
+}
+.contact-us__form-options {
+  display: flex;
+  -moz-column-gap: 35px;
+       column-gap: 35px;
+  align-items: center;
+}
+.contact-us__form-option {
+  display: flex;
+  align-items: center;
+  -moz-column-gap: 14px;
+       column-gap: 14px;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 100%;
+  letter-spacing: 0%;
+  color: #000000;
+}
+.contact-us__form-radio {
+  width: 28px;
+  height: 28px;
+  accent-color: #b9ff66;
+}
+.contact-us__form-groups {
+  display: flex;
+  flex-direction: column;
+  row-gap: 25px;
+}
+.contact-us__form-group {
+  display: flex;
+  flex-direction: column;
+  row-gap: 5px;
+}
+.contact-us__form-input {
+  width: 100%;
+  height: 59px;
+  border-radius: 14px;
+  padding: 18px 30px;
+}
+.contact-us__form-textarea {
+  width: 100%;
+  height: 190px;
+  resize: none;
+  border-radius: 14px;
+  padding: 18px 30px;
+}
+.contact-us__form-label {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 28px;
+  letter-spacing: 0%;
+  color: #000000;
+}
+.contact-us__form-button {
+  width: 100%;
+  height: 68px;
+  background: #191a23;
+  border-radius: 14px;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 28px;
+  letter-spacing: 0%;
+  color: #ffffff;
 }/*# sourceMappingURL=style.css.map */
