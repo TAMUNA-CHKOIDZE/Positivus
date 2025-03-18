@@ -434,3 +434,74 @@ main {
     margin-left: auto;
   }
 }
+
+// ----- This is the testimonials section -----
+.testimonials {
+  margin-bottom: 140px;
+
+  &__header {
+    margin-bottom: 80px;
+    @include flex(flex-start, center, row, 40px, 0);
+  }
+
+  &__title {
+    @include font-style(500, 40px, 100%, 0%);
+    color: $black;
+    padding-inline: 7px;
+    background: $primary-color;
+    border-radius: 7px;
+  }
+
+  &__description {
+    width: 473px;
+    font-family: Space Grotesk;
+    @include font-style(400, 18px, 100%, 0%);
+    color: $black;
+  }
+
+  &__block {
+    padding-block: 84px 68px;
+    background: $dark-color;
+  }
+  &__cards {
+    @include flex(center, center, row, 50px, 0);
+    overflow: hidden;
+    margin-bottom: 124px;
+  }
+  &__card {
+    position: relative;
+  }
+  &__card-text {
+    position: absolute;
+    top: 48px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 502px;
+    @include font-style(400, 18px, 100%, 0%);
+    color: $white;
+  }
+  &__card-footer {
+    margin: 20px 0 0 80px;
+  }
+  &__card-name {
+    color: $primary-color;
+    @include font-style(500, 20px, 100%, 0%);
+  }
+  &__card-position {
+    color: $white;
+    @include font-style(400, 18px, 100%, 0%);
+  }
+  &__controls {
+    margin: auto;
+    width: 564px;
+    @include flex(space-between, center, row, 0, 0);
+  }
+  &__control-prev,
+  &__control-next {
+    border: none;
+    background: transparent;
+  }
+  &__stars {
+    @include flex(center, center, row, 19px, 0);
+  }
+}
