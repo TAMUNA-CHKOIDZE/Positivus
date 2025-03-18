@@ -266,3 +266,99 @@ main {
     background: $white;
   }
 }
+
+// ----- This is the Our Working Process section -----
+.working-process {
+  margin-bottom: 140px;
+
+  &__header {
+    margin-bottom: 80px;
+    @include flex(flex-start, center, row, 40px, 0);
+  }
+
+  &__title {
+    @include font-style(500, 40px, 100%, 0%);
+    color: $black;
+    padding-inline: 7px;
+    background: $primary-color;
+    border-radius: 7px;
+  }
+
+  &__text {
+    width: 292px;
+    font-family: Space Grotesk;
+    @include font-style(400, 18px, 100%, 0%);
+    color: $black;
+  }
+
+  &__block {
+    @include flex(center, center, column, 0, 30px);
+  }
+
+  &__step {
+    @include border(1px, solid, $dark-color);
+    border-radius: $border-radius45;
+    padding: 41px 60px;
+    width: 100%;
+    background: $light-color;
+    transition: background-color 0.3s;
+    cursor: pointer;
+  }
+
+  &__content {
+    @include flex(space-between, center, row, 0, 0);
+  }
+
+  &__step-heading {
+    @include flex(center, center, row, 25px, 0);
+  }
+
+  &__step-number {
+    @include font-style(500, 60px, 100%, 0%);
+    color: $black;
+  }
+
+  &__step-title {
+    @include font-style(500, 30px, 100%, 0%);
+    color: $black;
+  }
+
+  &__minus-icon {
+    display: none;
+  }
+
+  &__step-details {
+    max-height: 0;
+    opacity: 0;
+    overflow: hidden;
+    padding-top: 0;
+    margin-top: 0;
+    border-top: 1px solid $black; 
+    transition: max-height .6s ease, opacity .6s ease, padding-top .6s ease, margin-top .6s ease;
+  }
+
+  &__step-description {
+    @include font-style(400, 18px, 100%, 0%);
+    color: $black;
+  }
+
+  &__step:hover {
+    background-color: $primary-color;
+  }
+
+  &__step:hover &__minus-icon {
+    display: block;
+  }
+
+  &__step:hover &__plus-icon {
+    display: none;
+  }
+
+  &__step:hover &__step-details {
+    max-height: 280px;
+    opacity: 1;
+    padding-top: 30px;
+    margin-top: 30px;
+  }
+}
+
