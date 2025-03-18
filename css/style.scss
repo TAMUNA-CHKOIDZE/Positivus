@@ -218,3 +218,51 @@ main {
     right: 135px;
   }
 }
+
+// ----- This is the case-studies section -----
+.case-studies {
+  margin-bottom: 140px;
+  &__header {
+    margin-bottom: 80px;
+    @include flex(flex-start, center, row, 40px, 0);
+  }
+  &__title {
+    @include font-style(500, 40px, 100%, 0%);
+    color: $black;
+    padding-inline: 7px;
+    background: $primary-color;
+    border-radius: 7px;
+  }
+  &__text {
+    width: 580px;
+    font-family: Space Grotesk;
+    @include font-style(400, 18px, 100%, 0%);
+    color: $black;
+  }
+  &__blocks {
+    @include flex(space-between, center, row, 0, 0);
+    border-radius: $border-radius45;
+    background: $dark-color;
+    padding: 70px 60px;
+  }
+  &__block {
+    width: 286px;
+  }
+  &__block-text {
+    @include font-style(400, 18px, 100%, 0%);
+    color: $white;
+    margin-bottom: 20px;
+  }
+  &__link {
+    @include flex(flex-start, center, row, 15px, 0);
+  }
+  &__link-text {
+    @include font-style(400, 20px, 28%, 0%);
+    color: $primary-color;
+  }
+  &__divider {
+    width: 1px;
+    height: 186px;
+    background: $white;
+  }
+}
