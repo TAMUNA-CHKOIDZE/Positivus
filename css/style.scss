@@ -16,14 +16,12 @@ body {
   @include container(1440px);
   padding: 60px 100px 0 100px;
   @include flex(space-between, center, row, 0, 0);
-
   &__icon-logo {
     transition: 0.3s;
     &:hover {
       filter: drop-shadow(4px 4px 2px $primary-color);
     }
   }
-
   &__nav-wrapper {
     @include flex(center, center, row, 40px, 0);
   }
@@ -35,7 +33,6 @@ body {
     color: $black;
     position: relative;
   }
-
   &__nav-link::after {
     content: "";
     position: absolute;
@@ -50,7 +47,6 @@ body {
   &__nav-link:hover::after {
     transform: scaleX(1);
   }
-
   &__quote-button {
     @include border(1px, solid, $dark-color);
     padding: $button-padding;
@@ -59,7 +55,7 @@ body {
     color: $black;
     transition: 0.3s;
     cursor: pointer;
-    &:active {
+    &:hover {
       @include border(1px, solid, $primary-color);
       border-radius: $border-radius14;
       background: $primary-color;
@@ -109,9 +105,12 @@ main {
       background: $btn-hover;
     }
   }
-  &__right {
+  &__right-desktop {
     width: 600px;
-    min-height: 515px;
+    max-height: 515px;
+  }
+  &__right-mobile {
+    display: none;
   }
   &__image {
     @include image-style(100%, 100%, cover);
@@ -259,8 +258,11 @@ main {
       background-color: $white;
     }
   }
-  &__card-link-group {
+  &__card-link-group-desktop {
     @include flex(flex-start, center, row, 15px, 0);
+  }
+  &__card-link-group-mobile {
+    display: none;
   }
   &__card-learn-more {
     @include font-style(400, 20px, 28px, 0%);
@@ -576,28 +578,56 @@ main {
     overflow: hidden;
     margin-bottom: 124px;
   }
-  &__card {
-    position: relative;
-  }
+
   &__card-text {
-    position: absolute;
-    top: 48px;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 502px;
-    @include font-style(400, 18px, 100%, 0%);
+    @include font-style(400, 18px, 26px, 0%);
     color: $white;
+    border-radius: $border-radius45;
+    padding: 48px 52px;
+    width: 606px;
+    display: inline-block;
+    background-color: $dark-color;
+    padding: 15px 20px;
+    border-radius: 20px;
+    border: 1px solid $primary-color;
+    position: relative;
+    font-size: 16px;
   }
+
+  &__card-text::after {
+    content: "";
+    position: absolute;
+    left: 20px;
+    bottom: -9px;
+    width: 0;
+    height: 0;
+    border-left: 10px solid transparent;
+    border-right: 10px solid transparent;
+    border-top: 10px solid $dark-color;
+  }
+
+  &__card-text::before {
+    content: "";
+    position: absolute;
+    left: 19px;
+    bottom: -10px;
+    width: 0;
+    height: 0;
+    border-left: 11px solid transparent;
+    border-right: 11px solid transparent;
+    border-top: 11px solid $primary-color;
+  }
+
   &__card-footer {
     margin: 20px 0 0 80px;
   }
   &__card-name {
     color: $primary-color;
-    @include font-style(500, 20px, 100%, 0%);
+    @include font-style(500, 20px, 28px, 0%);
   }
   &__card-position {
     color: $white;
-    @include font-style(400, 18px, 100%, 0%);
+    @include font-style(400, 18px, 28px, 0%);
   }
   &__controls {
     margin: auto;
@@ -750,10 +780,12 @@ main {
       text-decoration: underline solid $primary-color;
     }
   }
-  &__socials {
+  &__socials-desktop {
     @include flex(center, center, row, 20px, 0);
   }
-
+  &__socials-mobile {
+    display: none;
+  }
   &__social-icon {
     transition: 0.3s;
     &:hover {
