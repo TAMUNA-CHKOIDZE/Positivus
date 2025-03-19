@@ -1,0 +1,871 @@
+// font
+@import url("https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300..700&display=swap");
+
+// Partial Files
+@import "./mixin";
+@import "./mobile";
+@import "./reset";
+@import "./variable";
+
+body {
+  font-family: $font;
+}
+
+// ----- header -----
+.header {
+  @include container(1440px);
+  padding: 60px 100px 0 100px;
+  @include flex(space-between, center, row, 0, 0);
+  &__icon-logo {
+    transition: 0.3s;
+    &:hover {
+      filter: drop-shadow(4px 4px 2px $primary-color);
+    }
+  }
+  &__nav-wrapper {
+    @include flex(center, center, row, 40px, 0);
+  }
+  &__nav-list {
+    @include flex(center, center, row, 40px, 0);
+  }
+  &__nav-link {
+    @include font-style(400, 20px, 28px, 0%);
+    color: $black;
+    position: relative;
+  }
+  &__nav-link::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -4px;
+    width: 100%;
+    height: 3px;
+    background: $primary-color;
+    transition: 0.3s;
+    transform: scale(0);
+  }
+  &__nav-link:hover::after {
+    transform: scaleX(1);
+  }
+  &__quote-button {
+    @include border(1px, solid, $dark-color);
+    padding: $button-padding;
+    border-radius: $border-radius14;
+    @include font-style(400, 20px, 28px, 0%);
+    color: $black;
+    transition: 0.3s;
+    cursor: pointer;
+    &:hover {
+      @include border(1px, solid, $primary-color);
+      border-radius: $border-radius14;
+      background: $primary-color;
+      @include font-style(400, 20px, 28px, 0%);
+      color: $black;
+    }
+  }
+
+  &__burger {
+    display: none;
+  }
+}
+
+// ----- This is the main content section of the website -----
+main {
+  @include container(1440px);
+  padding-inline: 100px;
+  margin-block: 70px 140px;
+}
+
+// ----- This is the hero section -----
+.hero {
+  @include flex(space-between, flex-start, row, 0, 0);
+  margin-bottom: 70px;
+  &__left {
+    width: 531px;
+    @include flex(center, flex-start, column, 0, 35px);
+  }
+  &__title {
+    @include font-style(500, 60px, 100%, 0%);
+    color: $black;
+  }
+  &__text {
+    @include font-style(400, 20px, 28px, 0%);
+    color: $black;
+  }
+  &__button {
+    @include font-style(400, 20px, 28px, 0%);
+    color: $white;
+    border: none;
+    border-radius: $border-radius14;
+    padding: $button-padding;
+    background: $dark-color;
+    transition: 0.3s;
+    cursor: pointer;
+    &:hover {
+      background: $btn-hover;
+    }
+  }
+  &__right-desktop {
+    width: 600px;
+    max-height: 515px;
+  }
+  &__right-mobile {
+    display: none;
+  }
+  &__image {
+    @include image-style(100%, 100%, cover);
+  }
+}
+
+// ----- This is the partners section -----
+.partners {
+  margin-bottom: 140px;
+  &__list {
+    @include flex(center, center, row, clamp(20px, 9vw, 95px), 0);
+    flex-wrap: wrap;
+  }
+  &__item {
+    height: 48px;
+  }
+  &__logo {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    filter: grayscale(100%);
+    transition: 0.3s;
+    cursor: pointer;
+    &:hover {
+      filter: grayscale(0%);
+    }
+  }
+}
+
+// ----- This is the services section -----
+.services {
+  margin-bottom: 100px;
+  &__header {
+    @include flex(flex-start, center, row, 40px, 0);
+    margin-bottom: 80px;
+  }
+  &__title {
+    background: $primary-color;
+    @include font-style(500, 40px, 100%, 0%);
+    color: $black;
+    border-radius: $border-radius14;
+    padding-inline: 7px;
+  }
+  &__description {
+    width: 580px;
+    @include font-style(400, 18px, 100%, 0%);
+    color: $black;
+  }
+  // Cards Section
+  &__cards {
+    @include flex(center, center, row, 40px, 40px);
+    flex-wrap: wrap;
+  }
+  &__card {
+    flex: 1 1 40%;
+    border-radius: $border-radius45;
+    padding: 50px;
+    min-height: 310px;
+    @include flex(center, center, row, 93px, 0);
+  }
+
+  &__card:nth-child(1) {
+    background: $light-color;
+    transition: 0.3s ease-in-out;
+    cursor: pointer;
+
+    &:hover {
+      box-shadow: 0 0 5px $primary-color, 0 0 15px $primary-color,
+        0 0 25px $primary-color;
+    }
+  }
+
+  &__card:nth-child(2) {
+    background: $primary-color;
+    transition: 0.3s ease-in-out;
+    cursor: pointer;
+
+    &:hover {
+      box-shadow: 0 0 5px $dark-color, 0 0 15px $dark-color,
+        0 0 25px $dark-color;
+    }
+  }
+  &__card:nth-child(3) {
+    background: $dark-color;
+    transition: 0.3s ease-in-out;
+    cursor: pointer;
+
+    &:hover {
+      box-shadow: 0 0 5px $primary-color, 0 0 15px $primary-color,
+        0 0 25px $primary-color;
+    }
+  }
+  &__card:nth-child(4) {
+    background: $light-color;
+    transition: 0.3s ease-in-out;
+    cursor: pointer;
+
+    &:hover {
+      box-shadow: 0 0 5px $primary-color, 0 0 15px $primary-color,
+        0 0 25px $primary-color;
+    }
+  }
+  &__card:nth-child(5) {
+    background: $primary-color;
+    transition: 0.3s ease-in-out;
+    cursor: pointer;
+
+    &:hover {
+      box-shadow: 0 0 5px $dark-color, 0 0 15px $dark-color,
+        0 0 25px $dark-color;
+    }
+  }
+  &__card:nth-child(6) {
+    background: $dark-color;
+    transition: 0.3s ease-in-out;
+    cursor: pointer;
+
+    &:hover {
+      box-shadow: 0 0 5px $primary-color, 0 0 15px $primary-color,
+        0 0 25px $primary-color;
+    }
+  }
+  &__card-left {
+    @include flex(center, flex-start, column, 0, 93px);
+  }
+  &__card-title {
+    @include font-style(500, 30px, 100%, 0%);
+    color: $black;
+  }
+  &__span1 {
+    border-radius: 7px;
+    &.green {
+      background: $primary-color;
+    }
+    &.white {
+      background-color: $white;
+    }
+  }
+  &__span2 {
+    border-radius: 7px;
+    &.green {
+      background: $primary-color;
+    }
+    &.white {
+      background-color: $white;
+    }
+  }
+  &__card-link-group-desktop {
+    @include flex(flex-start, center, row, 15px, 0);
+  }
+  &__card-link-group-mobile {
+    display: none;
+  }
+  &__card-learn-more {
+    @include font-style(400, 20px, 28px, 0%);
+    color: $black;
+    &.color-white {
+      color: $white;
+    }
+  }
+  &__card-right {
+    width: 210px;
+  }
+  &__card-image {
+    width: 100%;
+  }
+}
+// ----- This is the proposal section -----
+.proposal {
+  margin-bottom: 140px;
+  padding: 60px;
+  background: $light-color;
+  border-radius: $border-radius45;
+  @include flex(space-between, center, row, 0, 0);
+  position: relative;
+  &__content {
+    width: 500px;
+    @include flex(center, flex-start, column, 0, 26px);
+  }
+  &__title {
+    @include font-style(500, 30px, 100%, 0%);
+    color: $black;
+  }
+  &__text {
+    @include font-style(400, 18px, 100%, 0%);
+    color: $black;
+  }
+  &__button {
+    padding: $button-padding;
+    background: $dark-color;
+    border-radius: $border-radius14;
+    color: $white;
+    font-style: (400, 20px, 28px, 0%);
+    transition: 0.3s;
+    cursor: pointer;
+    &:hover {
+      background: $btn-hover;
+    }
+  }
+  &__image {
+    position: absolute;
+    right: 135px;
+  }
+}
+
+// ----- This is the case-studies section -----
+.case-studies {
+  margin-bottom: 140px;
+  &__header {
+    margin-bottom: 80px;
+    @include flex(flex-start, center, row, 40px, 0);
+  }
+  &__title {
+    @include font-style(500, 40px, 100%, 0%);
+    color: $black;
+    padding-inline: 7px;
+    background: $primary-color;
+    border-radius: 7px;
+  }
+  &__text {
+    width: 580px;
+    font-family: Space Grotesk;
+    @include font-style(400, 18px, 100%, 0%);
+    color: $black;
+  }
+  &__blocks {
+    @include flex(space-between, center, row, 0, 0);
+    border-radius: $border-radius45;
+    background: $dark-color;
+    padding: 70px 60px;
+  }
+  &__block {
+    width: 286px;
+  }
+  &__block-text {
+    @include font-style(400, 18px, 100%, 0%);
+    color: $white;
+    margin-bottom: 20px;
+  }
+  &__link {
+    @include flex(flex-start, center, row, 15px, 0);
+  }
+  &__link-text {
+    @include font-style(400, 20px, 28%, 0%);
+    color: $primary-color;
+  }
+  &__divider {
+    width: 1px;
+    height: 186px;
+    background: $white;
+  }
+}
+
+// ----- This is the Our Working Process section -----
+.working-process {
+  margin-bottom: 140px;
+
+  &__header {
+    margin-bottom: 80px;
+    @include flex(flex-start, center, row, 40px, 0);
+  }
+
+  &__title {
+    @include font-style(500, 40px, 100%, 0%);
+    color: $black;
+    padding-inline: 7px;
+    background: $primary-color;
+    border-radius: 7px;
+  }
+
+  &__text {
+    width: 292px;
+    font-family: Space Grotesk;
+    @include font-style(400, 18px, 100%, 0%);
+    color: $black;
+  }
+
+  &__block {
+    @include flex(center, center, column, 0, 30px);
+  }
+
+  &__step {
+    @include border(1px, solid, $dark-color);
+    border-radius: $border-radius45;
+    padding: 41px 60px;
+    width: 100%;
+    background: $light-color;
+    transition: background-color 0.3s;
+    cursor: pointer;
+    box-shadow: $box-shadow;
+  }
+
+  &__content {
+    @include flex(space-between, center, row, 0, 0);
+  }
+
+  &__step-heading {
+    @include flex(center, center, row, 25px, 0);
+  }
+
+  &__step-number {
+    @include font-style(500, 60px, 100%, 0%);
+    color: $black;
+  }
+
+  &__step-title {
+    @include font-style(500, 30px, 100%, 0%);
+    color: $black;
+  }
+
+  &__minus-icon {
+    display: none;
+  }
+
+  &__step-details {
+    max-height: 0;
+    opacity: 0;
+    overflow: hidden;
+    padding-top: 0;
+    margin-top: 0;
+    border-top: 1px solid $black;
+    transition: max-height 0.6s ease, opacity 0.6s ease, padding-top 0.6s ease,
+      margin-top 0.6s ease;
+  }
+
+  &__step-description {
+    @include font-style(400, 18px, 100%, 0%);
+    color: $black;
+  }
+
+  &__step:hover {
+    background-color: $primary-color;
+  }
+
+  &__step:hover &__minus-icon {
+    display: block;
+  }
+
+  &__step:hover &__plus-icon {
+    display: none;
+  }
+
+  &__step:hover &__step-details {
+    max-height: 280px;
+    opacity: 1;
+    padding-top: 30px;
+    margin-top: 30px;
+  }
+}
+
+// ----- This is the team section -----
+.team {
+  margin-bottom: 140px;
+
+  &__header {
+    margin-bottom: 80px;
+    @include flex(flex-start, center, row, 40px, 0);
+  }
+
+  &__title {
+    @include font-style(500, 40px, 100%, 0%);
+    color: $black;
+    padding-inline: 7px;
+    background: $primary-color;
+    border-radius: 7px;
+  }
+
+  &__description {
+    width: 473px;
+    font-family: Space Grotesk;
+    @include font-style(400, 18px, 100%, 0%);
+    color: $black;
+  }
+  &__cards {
+    @include flex(center, center, row, 40px, 40px);
+    flex-wrap: wrap;
+  }
+  &__card {
+    flex: 1 1 30%;
+    height: 354px;
+    @include border(1px, solid, $dark-color);
+    border-radius: $border-radius45;
+    padding: 40px 35px 60px;
+    box-shadow: $box-shadow;
+    transition: 0.3s;
+    cursor: pointer;
+
+    &:hover {
+      box-shadow: 0 0 0 transparent;
+      @include border(1px, solid, $primary-color);
+    }
+  }
+
+  &__card-top {
+    @include flex(flex-start, flex-end, row, 20px, 0);
+    position: relative;
+    padding-bottom: 28px;
+    margin-bottom: 28px;
+    border-bottom: 1px solid $black;
+  }
+
+  &__card-name {
+    @include font-style(500, 20px, 100%, 0%);
+    color: $black;
+  }
+  &__card-position {
+    @include font-style(400, 18px, 100%, 0%);
+    color: $black;
+  }
+  &__card-icon {
+    position: absolute;
+    top: 0;
+    right: 0;
+  }
+  &__card-experience {
+    @include font-style(400, 18px, 100%, 0%);
+    color: $black;
+  }
+  &__button {
+    margin-top: 40px;
+    padding: 20px 76px;
+    border-radius: $border-radius14;
+    background: $dark-color;
+    color: $white;
+    @include font-style(400, 20px, 28px, 0%);
+    display: flex;
+    margin-left: auto;
+    transition: 0.3s;
+    cursor: pointer;
+    &:hover {
+      background: $btn-hover;
+    }
+  }
+}
+
+// ----- This is the testimonials section -----
+.testimonials {
+  margin-bottom: 140px;
+
+  &__header {
+    margin-bottom: 80px;
+    @include flex(flex-start, center, row, 40px, 0);
+  }
+  &__title {
+    @include font-style(500, 40px, 100%, 0%);
+    color: $black;
+    padding-inline: 7px;
+    background: $primary-color;
+    border-radius: 7px;
+  }
+
+  &__description {
+    width: 473px;
+    font-family: Space Grotesk;
+    @include font-style(400, 18px, 100%, 0%);
+    color: $black;
+  }
+
+  &__block {
+    padding-block: 84px 68px;
+    background: $dark-color;
+  }
+  &__cards {
+    @include flex(center, center, row, 50px, 0);
+    overflow: hidden;
+    margin-bottom: 124px;
+  }
+
+  &__card-text {
+    @include font-style(400, 18px, 26px, 0%);
+    color: $white;
+    border-radius: $border-radius45;
+    padding: 48px 52px;
+    width: 606px;
+    display: inline-block;
+    background-color: $dark-color;
+    padding: 15px 20px;
+    border-radius: 20px;
+    border: 1px solid $primary-color;
+    position: relative;
+    font-size: 16px;
+  }
+
+  &__card-text::after {
+    content: "";
+    position: absolute;
+    left: 20px;
+    bottom: -9px;
+    width: 0;
+    height: 0;
+    border-left: 10px solid transparent;
+    border-right: 10px solid transparent;
+    border-top: 10px solid $dark-color;
+  }
+
+  &__card-text::before {
+    content: "";
+    position: absolute;
+    left: 19px;
+    bottom: -10px;
+    width: 0;
+    height: 0;
+    border-left: 11px solid transparent;
+    border-right: 11px solid transparent;
+    border-top: 11px solid $primary-color;
+  }
+
+  &__card-footer {
+    margin: 20px 0 0 80px;
+  }
+  &__card-name {
+    color: $primary-color;
+    @include font-style(500, 20px, 28px, 0%);
+  }
+  &__card-position {
+    color: $white;
+    @include font-style(400, 18px, 28px, 0%);
+  }
+  &__controls {
+    margin: auto;
+    width: 564px;
+    @include flex(space-between, center, row, 0, 0);
+  }
+  &__control-prev,
+  &__control-next {
+    border: none;
+    background: transparent;
+  }
+  &__stars {
+    @include flex(center, center, row, 19px, 0);
+  }
+}
+
+// ----- This is the Contact Us section -----
+.contact-us {
+  margin-bottom: 140px;
+
+  &__header {
+    margin-bottom: 80px;
+    @include flex(flex-start, center, row, 40px, 0);
+  }
+  &__title {
+    @include font-style(500, 40px, 100%, 0%);
+    color: $black;
+    padding-inline: 7px;
+    background: $primary-color;
+    border-radius: 7px;
+  }
+
+  &__description {
+    width: 323px;
+    font-family: Space Grotesk;
+    @include font-style(400, 18px, 100%, 0%);
+    color: $black;
+  }
+  &__body {
+    background: $light-color;
+    border-radius: $border-radius45;
+    position: relative;
+    overflow: hidden;
+    height: 773px;
+    padding: 60px 0 80px 100px;
+    @include flex(space-between, flex-start, row, 0, 0);
+  }
+  &__form {
+    width: 556px;
+  }
+  &__form-content {
+    @include flex(flex-start, flex-start, column, 0, 40px);
+  }
+
+  &__form-options {
+    @include flex(flex-start, center, row, 35px, 0);
+  }
+  &__form-option {
+    display: flex;
+    align-items: center;
+    column-gap: 14px;
+    @include flex(flex-start, center, row, 14px, 0);
+    @include font-style(400, 18px, 100%, 0%);
+    color: $black;
+  }
+  &__form-radio {
+    width: 28px;
+    height: 28px;
+    accent-color: $primary-color;
+  }
+  &__form-groups {
+    @include flex(flex-start, center, column, 0, 25px);
+    width: 100%;
+  }
+  &__form-group {
+    @include flex(flex-start, flex-start, column, 0, 5px);
+    width: 100%;
+  }
+  &__form-input {
+    width: 100%;
+    height: 59px;
+    border-radius: $border-radius14;
+    padding: 18px 30px;
+    @include border(1px, solid, $black);
+    outline: none;
+  }
+  &__form-textarea {
+    width: 100%;
+    height: 190px;
+    resize: none;
+    border-radius: $border-radius14;
+    padding: 18px 30px;
+    @include border(1px, solid, $black);
+    outline: none;
+  }
+  &__form-label {
+    @include font-style(400, 16px, 28px, 0%);
+    color: $black;
+  }
+  &__form-button {
+    width: 100%;
+    height: 68px;
+    background: $dark-color;
+    border-radius: $border-radius14;
+    @include font-style(400, 20px, 28px, 0%);
+    color: $white;
+    transition: 0.3s;
+    cursor: pointer;
+    &:hover {
+      background: $btn-hover;
+    }
+  }
+  &__illustration {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    left: 70%;
+  }
+}
+
+// ----- This is the footer -----
+.footer {
+  background-color: $dark-color;
+  @include container(1241px);
+  padding: 55px 60px 50px;
+  border-radius: 45px 45px 0 0;
+  &__header {
+    @include flex(space-between, center, row, 0, 0);
+    margin-bottom: 66px;
+  }
+
+  &__icon-logo {
+    transition: 0.3s;
+    &:hover {
+      filter: drop-shadow(1px 1px 2px $primary-color);
+    }
+  }
+
+  &__nav-list {
+    @include flex(center, center, row, 40px, 0);
+  }
+  &__nav-link {
+    @include font-style(400, 18px, 100%, 0%);
+    text-decoration: underline solid $white;
+    color: $white;
+    transition: 0.3s;
+
+    &:hover {
+      color: $primary-color;
+      text-decoration: underline solid $primary-color;
+    }
+  }
+  &__socials-desktop {
+    @include flex(center, center, row, 20px, 0);
+  }
+  &__socials-mobile {
+    display: none;
+  }
+  &__social-icon {
+    transition: 0.3s;
+    &:hover {
+      transform: translateX(2px);
+    }
+  }
+  &__container {
+    @include flex(space-between, center, row, 154px, 0);
+  }
+  &__contact-us {
+    width: 332px;
+  }
+  &__title {
+    margin-bottom: 27px;
+    @include font-style(500, 20px, 100%, 0%);
+    color: $black;
+    background: $primary-color;
+    padding-inline: 7px;
+    border-radius: 7px;
+    display: inline-block;
+  }
+  &__contact-us-list {
+    @include flex(flex-start, flex-start, column, 0, 20px);
+  }
+  &__contact-us-link {
+    @include font-style(400, 18px, 100%, 0%);
+    color: $white;
+
+    &:hover {
+      color: lighten($primary-color, 20%);
+    }
+  }
+  &__form {
+    width: 634px;
+    height: 184px;
+    background: $form-background;
+    border-radius: $border-radius14;
+    @include flex(center, center, row, 20px, 0);
+  }
+  &__email-input {
+    width: 285px;
+    height: 68px;
+    padding-left: 35px;
+    border: 1px solid $white;
+    border-radius: $border-radius14;
+    background: transparent;
+    color: $white;
+  }
+  &__email-input::placeholder {
+    @include font-style(400, 18px, 100%, 0%);
+    color: $white;
+  }
+  &_subscribe_btn {
+    width: 249px;
+    height: 68px;
+    border: none;
+    border-radius: $border-radius14;
+    background: $primary-color;
+    @include font-style(400, 20px, 28px, 0%);
+    color: $black;
+    cursor: pointer;
+    transition: 0.3s;
+
+    &:hover {
+      background: darken($primary-color, 10%);
+    }
+  }
+  &__dividing_line {
+    width: 100%;
+    height: 1px;
+    background: $white;
+    margin-block: 50px;
+  }
+  &__copyright {
+    @include flex(flex-start, center, row, 40px, 0);
+    @include font-style(400, 18px, 28px, 0%);
+    color: $white;
+  }
+  &__privacy {
+    @include font-style(400, 18px, 28px, 0%);
+    color: $white;
+  }
+}

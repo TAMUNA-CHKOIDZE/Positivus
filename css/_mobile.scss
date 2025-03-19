@@ -1,0 +1,395 @@
+@import "./variable";
+@import "./mixin";
+
+@media screen and (max-width: 431px) {
+  // ----- header -----
+  .header {
+    position: relative;
+    padding: 32px 20px 0 20px !important;
+
+    &__nav-wrapper {
+      @include flex(
+        space-around !important,
+        center,
+        column !important,
+        0,
+        20px !important
+      );
+      position: absolute;
+      top: 0;
+      right: 0;
+      height: 100vh;
+      width: 280px;
+      background-color: $primary-color;
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.5s ease;
+    }
+    &__nav-list {
+      @include flex(center, center, column !important, 40, 40px !important);
+    }
+    &__burger {
+      display: block !important;
+      cursor: pointer;
+    }
+
+    &__burger:hover + &__nav-wrapper,
+    &__nav-wrapper:hover {
+      max-height: 100vh;
+    }
+  }
+  // ----- This is the main content section of the website -----
+  main {
+    padding-inline: 20px !important;
+    margin-block: 50px 90px !important;
+  }
+  // ----- This is the hero section -----
+  .hero {
+    margin-bottom: 66px !important;
+    @include flex(space-between, flex-start, column !important, 0, 0);
+
+    &__left {
+      width: 100% !important;
+      @include flex(flex-start !important, flex-start, column, 0, 0 !important);
+    }
+    &__title {
+      @include font-style(500, 40px !important, 100%, 0%);
+      margin-bottom: 24px;
+    }
+    &__text {
+      @include font-style(400, 16px !important, 24px !important, 0%);
+      margin-block: 40px;
+    }
+    &__button {
+      width: 100% !important;
+      @include font-style(400, 16px !important, 24px !important, 0%);
+    }
+    &__right-desktop {
+      display: none;
+    }
+    &__right-mobile {
+      display: block !important;
+      width: 100% !important;
+      max-height: 286px !important;
+    }
+  }
+  // ----- This is the partners section -----
+  .partners {
+    margin-bottom: 64px !important;
+    &__list {
+      @include flex(
+        flex-start !important,
+        center,
+        row,
+        24px !important,
+        24px !important
+      );
+    }
+    &__item {
+      width: auto !important;
+      height: 40px !important;
+    }
+    &__logo {
+      object-fit: contain !important;
+    }
+  }
+  // ----- This is the services section -----
+  .services {
+    margin-bottom: 64px !important;
+    &__header {
+      @include flex(
+        center !important,
+        center,
+        column !important,
+        0 !important,
+        32px !important
+      );
+      margin-bottom: 40px !important;
+    }
+
+    &__description {
+      width: 100% !important;
+      @include font-style(400, 16px !important, 100%, 0%);
+      text-align: center;
+    }
+    &__card {
+      flex: 1 1 100%;
+      padding: 50px;
+      @include flex(
+        center,
+        flex-start !important,
+        column !important,
+        0 !important,
+        28px !important
+      );
+    }
+    &__card-title {
+      @include font-style(500, 20px, 100%, 0%);
+      @include flex(center, flex-start, column, 0, 0);
+    }
+    &__card-link-group-desktop {
+      display: none !important;
+    }
+    &__card-link-group-mobile {
+      display: block !important;
+    }
+    &__footer-mobile {
+      width: 100%;
+      @include flex(space-between, flex-end, row, 0, 0);
+    }
+
+    &__card-right {
+      max-width: 160px !important;
+    }
+  }
+  // ----- This is the proposal section -----
+  .proposal {
+    margin-bottom: 64px !important;
+    padding: 50px !important;
+    &__button {
+      width: 100%;
+      @include font-style(400, 16px !important, 24px !important, 0%);
+    }
+    &__image {
+      display: none;
+    }
+  }
+  // ----- This is the case-studies section -----
+  .case-studies {
+    margin-bottom: 64px !important;
+    &__header {
+      @include flex(
+        center !important,
+        center,
+        column !important,
+        0 !important,
+        32px !important
+      );
+      margin-bottom: 40px !important;
+    }
+
+    &__text {
+      width: 100% !important;
+      @include font-style(400, 16px !important, 100%, 0%);
+      text-align: center;
+    }
+    &__blocks {
+      @include flex(flex-start !important, center, row, 20px !important, 0);
+      border-radius: 0px !important;
+      background: transparent !important;
+      padding: 0px !important;
+      overflow: hidden;
+    }
+    &__block {
+      width: 350px !important;
+      flex-shrink: 0;
+      background: $dark-color;
+      padding: 50px;
+      border-radius: $border-radius45;
+    }
+    &__divider {
+      display: none;
+    }
+  }
+  // ----- This is the Our Working Process section -----
+  .working-process {
+    margin-bottom: 64px !important;
+    &__header {
+      @include flex(
+        center !important,
+        center,
+        column !important,
+        0 !important,
+        32px !important
+      );
+      text-align: center;
+      margin-bottom: 40px !important;
+    }
+    &__title {
+      @include flex(center, center, column, 0, 0);
+      background: transparent !important;
+    }
+    &__span {
+      background: $primary-color;
+      border-radius: 7px;
+      padding-inline: 7px;
+    }
+    &__text {
+      width: 100% !important;
+      @include font-style(400, 16px !important, 100%, 0%);
+    }
+    &__block {
+      @include flex(center, center, column, 0, 16px !important);
+    }
+    &__step {
+      padding: 30px !important;
+    }
+    &__plus-icon,
+    &__minus-icon {
+      width: 30px;
+      height: 30px;
+    }
+    &__step-heading {
+      @include flex(center, center, row, 16px !important, 0);
+    }
+    &__step-number {
+      @include font-style(500, 40px !important, 100%, 0%);
+      color: $black;
+    }
+
+    &__step-title {
+      @include font-style(500, 18px !important, 100%, 0%);
+      color: $black;
+    }
+  }
+  // ----- This is the team section -----
+  .team {
+    margin-bottom: 64px !important;
+    &__header {
+      @include flex(
+        center !important,
+        center,
+        column !important,
+        0 !important,
+        32px !important
+      );
+      margin-bottom: 40px !important;
+    }
+
+    &__description {
+      width: 100% !important;
+      @include font-style(400, 16px !important, 100%, 0%);
+      text-align: center;
+    }
+    &__card {
+      padding: 38px 45px !important;
+      height: auto !important;
+    }
+    &__button {
+      width: 100%;
+      margin-top: 32px !important;
+      justify-content: center;
+    }
+  }
+  // ----- This is the testimonials section -----
+  .testimonials {
+    margin-bottom: 64px !important;
+    &__header {
+      @include flex(
+        center !important,
+        center,
+        column !important,
+        0 !important,
+        32px !important
+      );
+      margin-bottom: 40px !important;
+    }
+    &__description {
+      width: 100% !important;
+      @include font-style(400, 16px !important, 100%, 0%);
+      text-align: center;
+    }
+    &__block {
+      padding: 30px 0px 50px !important;
+    }
+    &__cards {
+      @include flex(center, center, row, 30px !important, 0);
+      margin-bottom: 55px !important;
+    }
+
+    &__card-text {
+      width: 330px !important;
+      padding: 20px 20px !important;
+    }
+    &__card-footer {
+      margin: 20px 0 0 40px !important;
+    }
+    &__controls {
+      width: 100% !important;
+      padding-inline: 30px;
+    }
+  }
+  // ----- This is the Contact Us section -----
+  .contact-us {
+    margin-bottom: 64px !important;
+    &__header {
+      @include flex(
+        center !important,
+        center,
+        column !important,
+        0 !important,
+        32px !important
+      );
+      margin-bottom: 40px !important;
+    }
+    &__description {
+      width: 100% !important;
+      @include font-style(400, 16px !important, 100%, 0%);
+      text-align: center;
+    }
+    &__body {
+      height: auto !important;
+      overflow: visible !important;
+      padding: 40px 30px !important;
+    }
+    &__illustration {
+      display: none;
+    }
+  }
+  // ----- This is the footer -----
+  .footer {
+    padding: 32px 20px !important;
+    border-radius: 0 !important;
+    &__header {
+      @include flex(space-between, center, column !important, 0, 0);
+      margin-bottom: 40px !important;
+    }
+    &__logo {
+      margin-bottom: 20px;
+    }
+    &__nav-list {
+      @include flex(center, center, column !important, 0, 20px !important);
+    }
+    &__nav-link {
+      text-decoration: none !important;
+    }
+    &__socials-desktop {
+      display: none !important;
+    }
+    &__socials-mobile {
+      display: flex !important;
+      justify-content: center;
+      column-gap: 20px;
+      margin-top: 40px;
+    }
+    &__container {
+      @include flex(
+        center !important,
+        center,
+        column !important,
+        0,
+        40px !important
+      );
+      text-align: center;
+    }
+    &__form {
+      width: 100% !important;
+      height: auto !important;
+      @include flex(center, center, column !important, 0, 20px !important);
+      padding: 20px;
+    }
+    &__contact-us-list {
+      @include flex(center !important, center !important, column, 0, 20px);
+    }
+    &__email-input,
+    &_subscribe_btn {
+      width: 100% !important;
+    }
+    &__dividing_line {
+      margin-block: 40px !important;
+    }
+    &__copyright {
+      @include flex(flex-start, center, column !important, 40px, 0);
+    }
+  }
+}
