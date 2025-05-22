@@ -5,16 +5,10 @@
   // ----- header -----
   .header {
     position: relative;
-    padding: 32px 20px 0 20px !important;
+    padding: 32px 20px 0 20px;
 
     &__nav-wrapper {
-      @include flex(
-        space-around !important,
-        center,
-        column !important,
-        0,
-        20px !important
-      );
+      @include flex(space-around, center, column, 0, 20px);
       position: absolute;
       top: 0;
       right: 0;
@@ -26,10 +20,10 @@
       transition: max-height 0.5s ease;
     }
     &__nav-list {
-      @include flex(center, center, column !important, 40, 40px !important);
+      @include flex(center, center, column, 40, 40px);
     }
     &__burger {
-      display: block !important;
+      display: block;
       cursor: pointer;
     }
 
@@ -40,98 +34,80 @@
   }
   // ----- This is the main content section of the website -----
   main {
-    padding-inline: 20px !important;
-    margin-block: 50px 90px !important;
+    padding-inline: 20px;
+    margin-block: 50px 90px;
   }
   // ----- This is the hero section -----
   .hero {
-    margin-bottom: 66px !important;
-    @include flex(space-between, flex-start, column !important, 0, 0);
+    margin-bottom: 66px;
+    @include flex(space-between, flex-start, column, 0, 0);
 
     &__left {
-      width: 100% !important;
-      @include flex(flex-start !important, flex-start, column, 0, 0 !important);
+      width: 100%;
+      @include flex(flex-start, flex-start, column, 0, 0);
     }
     &__title {
-      @include font-style(500, 40px !important, 100%, 0%);
+      @include font-style(500, 40px, 100%, 0%);
       margin-bottom: 24px;
     }
     &__text {
-      @include font-style(400, 16px !important, 24px !important, 0%);
+      @include font-style(400, 16px, 24px, 0%);
       margin-block: 40px;
     }
     &__button {
-      width: 100% !important;
-      @include font-style(400, 16px !important, 24px !important, 0%);
+      width: 100%;
+      @include font-style(400, 16px, 24px, 0%);
     }
     &__right-desktop {
       display: none;
     }
     &__right-mobile {
-      display: block !important;
-      width: 100% !important;
-      max-height: 286px !important;
+      display: block;
+      width: 100%;
+      max-height: 286px;
     }
   }
   // ----- This is the partners section -----
   .partners {
-    margin-bottom: 64px !important;
+    margin-bottom: 64px;
     &__list {
-      @include flex(
-        flex-start !important,
-        center,
-        row,
-        24px !important,
-        24px !important
-      );
+      @include flex(flex-start, center, row, 24px, 24px);
     }
     &__item {
-      width: auto !important;
-      height: 40px !important;
+      width: auto;
+      height: 40px;
     }
     &__logo {
-      object-fit: contain !important;
+      object-fit: contain;
     }
   }
   // ----- This is the services section -----
   .services {
-    margin-bottom: 64px !important;
+    margin-bottom: 64px;
     &__header {
-      @include flex(
-        center !important,
-        center,
-        column !important,
-        0 !important,
-        32px !important
-      );
-      margin-bottom: 40px !important;
+      @include flex(center, center, column, 0, 32px);
+      margin-bottom: 40px;
     }
 
     &__description {
-      width: 100% !important;
-      @include font-style(400, 16px !important, 100%, 0%);
+      width: 100%;
+      @include font-style(400, 16px, 100%, 0%);
       text-align: center;
     }
     &__card {
       flex: 1 1 100%;
       padding: 50px;
-      @include flex(
-        center,
-        flex-start !important,
-        column !important,
-        0 !important,
-        28px !important
-      );
+      @include flex(center, flex-start, column, 0, 28px);
     }
     &__card-title {
       @include font-style(500, 20px, 100%, 0%);
       @include flex(center, flex-start, column, 0, 0);
     }
     &__card-link-group-desktop {
-      display: none !important;
+      display: none;
     }
     &__card-link-group-mobile {
-      display: block !important;
+      display: block;
     }
     &__footer-mobile {
       width: 100%;
@@ -139,16 +115,16 @@
     }
 
     &__card-right {
-      max-width: 160px !important;
+      max-width: 160px;
     }
   }
   // ----- This is the proposal section -----
   .proposal {
-    margin-bottom: 64px !important;
-    padding: 50px !important;
+    margin-bottom: 64px;
+    padding: 50px;
     &__button {
       width: 100%;
-      @include font-style(400, 16px !important, 24px !important, 0%);
+      @include font-style(400, 16px, 24px, 0%);
     }
     &__image {
       display: none;
@@ -156,32 +132,26 @@
   }
   // ----- This is the case-studies section -----
   .case-studies {
-    margin-bottom: 64px !important;
+    margin-bottom: 64px;
     &__header {
-      @include flex(
-        center !important,
-        center,
-        column !important,
-        0 !important,
-        32px !important
-      );
-      margin-bottom: 40px !important;
+      @include flex(center, center, column, 0, 32px);
+      margin-bottom: 40px;
     }
 
     &__text {
-      width: 100% !important;
-      @include font-style(400, 16px !important, 100%, 0%);
+      width: 100%;
+      @include font-style(400, 16px, 100%, 0%);
       text-align: center;
     }
     &__blocks {
-      @include flex(flex-start !important, center, row, 20px !important, 0);
-      border-radius: 0px !important;
-      background: transparent !important;
-      padding: 0px !important;
+      @include flex(flex-start, center, row, 20px, 0);
+      border-radius: 0px;
+      background: transparent;
+      padding: 0px;
       overflow: hidden;
     }
     &__block {
-      width: 350px !important;
+      width: 350px;
       flex-shrink: 0;
       background: $dark-color;
       padding: 50px;
@@ -193,21 +163,15 @@
   }
   // ----- This is the Our Working Process section -----
   .working-process {
-    margin-bottom: 64px !important;
+    margin-bottom: 64px;
     &__header {
-      @include flex(
-        center !important,
-        center,
-        column !important,
-        0 !important,
-        32px !important
-      );
+      @include flex(center, center, column, 0, 32px);
       text-align: center;
-      margin-bottom: 40px !important;
+      margin-bottom: 40px;
     }
     &__title {
       @include flex(center, center, column, 0, 0);
-      background: transparent !important;
+      background: transparent;
     }
     &__span {
       background: $primary-color;
@@ -215,14 +179,14 @@
       padding-inline: 7px;
     }
     &__text {
-      width: 100% !important;
-      @include font-style(400, 16px !important, 100%, 0%);
+      width: 100%;
+      @include font-style(400, 16px, 100%, 0%);
     }
     &__block {
-      @include flex(center, center, column, 0, 16px !important);
+      @include flex(center, center, column, 0, 16px);
     }
     &__step {
-      padding: 30px !important;
+      padding: 30px;
     }
     &__plus-icon,
     &__minus-icon {
@@ -230,166 +194,142 @@
       height: 30px;
     }
     &__step-heading {
-      @include flex(center, center, row, 16px !important, 0);
+      @include flex(center, center, row, 16px, 0);
     }
     &__step-number {
-      @include font-style(500, 40px !important, 100%, 0%);
+      @include font-style(500, 40px, 100%, 0%);
       color: $black;
     }
 
     &__step-title {
-      @include font-style(500, 18px !important, 100%, 0%);
+      @include font-style(500, 18px, 100%, 0%);
       color: $black;
     }
   }
   // ----- This is the team section -----
   .team {
-    margin-bottom: 64px !important;
+    margin-bottom: 64px;
     &__header {
-      @include flex(
-        center !important,
-        center,
-        column !important,
-        0 !important,
-        32px !important
-      );
-      margin-bottom: 40px !important;
+      @include flex(center, center, column, 0, 32px);
+      margin-bottom: 40px;
     }
 
     &__description {
-      width: 100% !important;
-      @include font-style(400, 16px !important, 100%, 0%);
+      width: 100%;
+      @include font-style(400, 16px, 100%, 0%);
       text-align: center;
     }
     &__card {
-      padding: 38px 45px !important;
-      height: auto !important;
+      padding: 38px 45px;
+      height: auto;
     }
     &__button {
       width: 100%;
-      margin-top: 32px !important;
+      margin-top: 32px;
       justify-content: center;
     }
   }
   // ----- This is the testimonials section -----
   .testimonials {
-    margin-bottom: 64px !important;
+    margin-bottom: 64px;
     &__header {
-      @include flex(
-        center !important,
-        center,
-        column !important,
-        0 !important,
-        32px !important
-      );
-      margin-bottom: 40px !important;
+      @include flex(center, center, column, 0, 32px);
+      margin-bottom: 40px;
     }
     &__description {
-      width: 100% !important;
-      @include font-style(400, 16px !important, 100%, 0%);
+      width: 100%;
+      @include font-style(400, 16px, 100%, 0%);
       text-align: center;
     }
     &__block {
-      padding: 30px 0px 50px !important;
+      padding: 30px 0px 50px;
     }
     &__cards {
-      @include flex(center, center, row, 30px !important, 0);
-      margin-bottom: 55px !important;
+      @include flex(center, center, row, 30px, 0);
+      margin-bottom: 55px;
     }
 
     &__card-text {
-      width: 330px !important;
-      padding: 20px 20px !important;
+      width: 330px;
+      padding: 20px 20px;
     }
     &__card-footer {
-      margin: 20px 0 0 40px !important;
+      margin: 20px 0 0 40px;
     }
     &__controls {
-      width: 100% !important;
+      width: 100%;
       padding-inline: 30px;
     }
   }
   // ----- This is the Contact Us section -----
   .contact-us {
-    margin-bottom: 64px !important;
+    margin-bottom: 64px;
     &__header {
-      @include flex(
-        center !important,
-        center,
-        column !important,
-        0 !important,
-        32px !important
-      );
-      margin-bottom: 40px !important;
+      @include flex(center, center, column, 0, 32px);
+      margin-bottom: 40px;
     }
     &__description {
       width: 100% !important;
-      @include font-style(400, 16px !important, 100%, 0%);
+      @include font-style(400, 16px, 100%, 0%);
       text-align: center;
     }
     &__body {
-      height: auto !important;
-      overflow: visible !important;
-      padding: 40px 30px !important;
-    }
-    &__illustration {
-      display: none;
+      height: auto;
+      overflow: hidden;
+      padding: 40px;
+      &__illustration {
+        display: none;
+      }
     }
   }
   // ----- This is the footer -----
   .footer {
-    padding: 32px 20px !important;
-    border-radius: 0 !important;
+    padding: 32px 20px;
+    border-radius: 0;
     &__header {
-      @include flex(space-between, center, column !important, 0, 0);
-      margin-bottom: 40px !important;
+      @include flex(space-between, center, column, 0, 0);
+      margin-bottom: 40px;
     }
     &__logo {
       margin-bottom: 20px;
     }
     &__nav-list {
-      @include flex(center, center, column !important, 0, 20px !important);
+      @include flex(center, center, column, 0, 20px);
     }
     &__nav-link {
-      text-decoration: none !important;
+      text-decoration: none;
     }
     &__socials-desktop {
-      display: none !important;
+      display: none;
     }
     &__socials-mobile {
-      display: flex !important;
+      display: flex;
       justify-content: center;
       column-gap: 20px;
       margin-top: 40px;
     }
     &__container {
-      @include flex(
-        center !important,
-        center,
-        column !important,
-        0,
-        40px !important
-      );
+      @include flex(center, center, column, 0, 40px);
       text-align: center;
     }
     &__form {
-      width: 100% !important;
-      height: auto !important;
-      @include flex(center, center, column !important, 0, 20px !important);
+      width: 100%;
+      height: auto;
+      @include flex(center, center, column, 0, 20px);
       padding: 20px;
     }
     &__contact-us-list {
-      @include flex(center !important, center !important, column, 0, 20px);
+      @include flex(center, center, column, 0, 20px);
     }
     &__email-input,
     &_subscribe_btn {
-      width: 100% !important;
+      width: 100%;
     }
     &__dividing_line {
-      margin-block: 40px !important;
+      margin-block: 40px;
     }
     &__copyright {
-      @include flex(flex-start, center, column !important, 40px, 0);
+      @include flex(flex-start, center, column, 40px, 0);
     }
   }
 }

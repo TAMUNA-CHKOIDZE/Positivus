@@ -3,7 +3,6 @@
 
 // Partial Files
 @import "./mixin";
-@import "./mobile";
 @import "./reset";
 @import "./variable";
 
@@ -869,3 +868,5 @@ main {
     color: $white;
   }
 }
+
+@import "./mobile";
